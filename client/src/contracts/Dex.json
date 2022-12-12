@@ -23050,14 +23050,70 @@
   },
   "networks": {
     "5777": {
-      "events": {},
+      "events": {
+        "0xdb0c486e680ba8026643e6a85f8d157b5e7bcd4b32b54d564542570a9eb20416": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "tradeId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "orderId",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "internalType": "bytes32",
+              "name": "ticker",
+              "type": "bytes32"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "trader1",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "trader2",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "date",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewTrade",
+          "type": "event"
+        }
+      },
       "links": {},
       "address": "0xE5a72277e7eb47Ce2Cb8AEDe3372967caBde2F21",
-      "transactionHash": "0x236aceced6a340d901b47d3b6de8b31108d2f81e095ce19ccb1e20f699adb5b9"
+      "transactionHash": "0x4b358e3c67fddb156f8820221d47abe67cd3e8a158e0913f49392f4629992e6b"
     }
   },
-  "schemaVersion": "3.4.10",
-  "updatedAt": "2022-12-09T15:02:02.506Z",
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-12T13:21:00.722Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

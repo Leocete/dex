@@ -43,12 +43,10 @@ contract('Dex', (accounts) => {
       });
     };
 
-    await Promise.all(
-      tokenList.map((token) => seedTokenBalance(token, trader1))
-    );
-    await Promise.all(
-      tokenList.map((token) => seedTokenBalance(token, trader2))
-    );
+    for (const token of tokenList) {
+      await seedTokenBalance(token, trader1);
+      await seedTokenBalance(token, trader2);
+    }
   });
 
   describe('deposit', () => {
