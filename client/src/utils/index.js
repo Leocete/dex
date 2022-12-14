@@ -6,9 +6,7 @@ import ERC20Abi from '../ERC20Abi.json';
 
 const getWeb3 = () =>
   new Promise(async (resolve, reject) => {
-    console.log('wewqewewe');
     let provider = await detectEthereumProvider();
-    console.log('PROVIDER', provider);
     if (provider) {
       await provider.request({ method: 'eth_requestAccounts' });
       try {

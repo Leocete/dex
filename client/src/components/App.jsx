@@ -1,19 +1,9 @@
 import { getWeb3, getContracts } from '../utils';
 import React, { useState, useEffect } from 'react';
-import Footer from './Footer';
+import Dex from './Dex';
 
 function Loading() {
   return <div>Loading...</div>;
-}
-
-function Dex() {
-  return (
-    <div id="app">
-      <div>Header</div>
-      <div>Main part</div>
-      <Footer />
-    </div>
-  );
 }
 
 function App() {
@@ -31,22 +21,15 @@ function App() {
       setAccounts(accounts);
     };
     init();
-    // eslint-disable-next-line
   }, []);
 
-  const isReady = () => {
-    return (
-      typeof web3 !== 'undefined' &&
-      typeof contracts !== 'undefined' &&
-      accounts.length > 0
-    );
-  };
+  const dataIsLoaded = !!web3 && !!contracts && accounts.length;
 
-  if (!isReady()) {
-    return <Loading />;
-  }
-
-  return <Dex web3={web3} accounts={accounts} contracts={contracts} />;
+  return dataIsLoaded ? (
+    <Dex web3={web3} accounts={accounts} contracts={contracts} />
+  ) : (
+    <Loading />
+  );
 }
 
 export default App;
